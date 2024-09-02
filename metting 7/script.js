@@ -11,6 +11,8 @@ datadiri.name="khairul"
 datadiri ['age']='25'
 console.log(datadiri['name']);
 console.log(datadiri['age']);
+console.log(datadiri.age);
+
 delete datadiri.addres
 console.log(datadiri['addres']);
 // no 2

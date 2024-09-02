@@ -67,5 +67,5 @@ class Manager extends Employe {
   }
 }
 
-var orang = new Manager('Fadgham','school')
+var orang = new Manager('Fadgham','school') 
 console.log(orang.introduce());
