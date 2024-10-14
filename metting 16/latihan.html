@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="car">
+        mobil
+    </div>
+    <h1 class="coba">
+        <b>coba DOM</b>
+    </h1>
+    <script>
+        let id = document.getElementById('car')
+        console.log(id);
+
+        const coba=document.getElementsByClassName("coba")
+        console.log(coba[0].innerHTML);
+        console.log(coba[0].innerText);
+        console.log(coba[0].textContent);
+        
+        const newElemet= document.createElement("p")
+        newElemet.innerText="coba createelement"
+        coba[0].appendChild(newElemet)
+        coba[0].removeChild(newElemet)
+    </script>
+</body>
+</html>

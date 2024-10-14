@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- no 1 -->
+    <div id="nama">nama saya fadgham</div>
+    <p class="sekolah">saya santri <b>pondok tahfizh plus abudzar</b></p>
+    <span class="sekolah" style="font-size: 30px;">Bogor Rumpin </span>
+    <!-- end no 1 -->
+     <br>
+    <!--no 2  -->
+    <div class="konten">
+        
+    </div>
+    <!-- end no 2 -->
+    <!-- no 3 -->
+    <div>
+        <ul id="kontenDaftar">
+
+        </ul>
+    </div>
+    <!-- end no 3 -->
+    <!-- no 4 -->
+    <div id="colorBox">
+        <p>Ini adalah Teks yang akan diubah warnanya</p>
+    </div>
+    <!-- end no 4 -->
+    <script>
+        // no 1
+        let id = document.getElementById('nama')
+        id.style.color = "red"
+        let quary=document.querySelector('.sekolah')
+        quary.innerText="coba createelement"
+        // end no 1
+        // no 2
+        let tes = document.getElementsByClassName("konten")
+        tes.innerHTML= '<b>Text baru</b>' 
+        tes.innerText="Text baru"
+        tes.textContent='Text baru'
+        console.log(tes.innerHTML);
+        console.log(tes.innerText);
+        console.log(tes.textContent);
+        // end no 2
+        // no 3
+        const kontenDaftar = document.getElementById("kontenDaftar");
+        const daftar = ["Item 1", "Item 2", "Item 3"];
+        for (let i = 0; i < daftar.length; i++) {
+            ;
+            const newDaftar = document.createElement("li");
+            newDaftar.innerHTML = daftar[i];
+            kontenDaftar.appendChild(newDaftar);
+        };
+        kontenDaftar.firstElementChild.remove();
+        // end no 3
+        const colorBox = document.querySelector('#colorBox');
+        let warnanya = prompt('Masukkan Warna');
+        if (warnanya == 'red') {
+            colorBox.style.color = 'red';
+        } else if (warnanya == 'blue') {
+            colorBox.style.color = 'blue';
+        } else if (warnanya == 'green') {
+            colorBox.style.color = 'green';
+        } else {
+            alert('Warna Yang Anda Masukkan Tidak Valid, Silahkan Masukkan Warna Yang Valid');
+        }
+
+    </script>
+</body>
+</html>
