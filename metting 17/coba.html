@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul">
+        <li id="1">item 1</li>
+        <li id="2">item 2</li>
+        <li id="3">item 3</li>
+    </ul>
+     <script>
+        const gambar=document.createElement("img")
+        gambar.setAttribute("src", "https://picsum.photos/200/300");
+        document.body.appendChild(gambar)
+        // coba 2
+        const item4= document.createElement("li")
+        const ul=document.getElementsByClassName("ul")
+        item4.innerText="item 4"
+        ul[0].appendChild(item4)
+     </script>
+</body>
+</html>

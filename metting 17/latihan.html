@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- no 1 -->
+    <img id="myImage" src="" alt="">
+    <!-- end no 1 -->
+    <!-- no 2 -->
+     <button id="myButton"></button>
+    <!-- end no 2 -->
+    <!-- no 3 -->
+     <ul id="myList"></ul>
+    <!-- end no 3 -->
+    <!-- no 4 -->
+    <!-- end no 4 -->
+    <!-- no 5 -->
+     <div id="imageContainer"></div>
+    <!-- end no 5 -->
+    <script>
+        // no 1
+        const gambar=document.getElementById("myImage")
+        gambar.setAttribute("src", "https://picsum.photos/200/300");
+        document.body.appendChild(gambar)
+        // end no 1
+        // no 2
+        const tombol = document.getElementById("myButton");
+        Object.assign(tombol.style, {
+        borderRadius: "25px",
+        backgroundColor: "green",
+        height: "50px",
+        width: "100px"
+        });
+        // end no 2
+        // no 3 
+        const li=document.createElement("li")
+        const ul=document.getElementById("myList")
+        li.innerText="Item Baru"
+        ul.appendChild(li)
+        // end no 3
+        // no 4 
+        const list = document.getElementById("myList");
+        const li2 = document.createElement("li");
+        li2.innerText = "Item Disisipkan";
+        list.insertBefore(li2, li,);
+        // end no 4
+        // no 5
+        const imageContainer = document.getElementById("imageContainer");
+        const image = document.createElement("img");
+        image.style.borderRadius = "50%";
+        image.setAttribute("src", "https://picsum.photos/200/300");
+        imageContainer.appendChild(image);
+        // end no 5
+    </script>
+</body>
+</html>
