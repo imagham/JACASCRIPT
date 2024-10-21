@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="onPageLoad()">
+    <!-- no 1 -->
+    <button id="myButton"style="width: 130px;height: 50px;margin-left: 46%;margin-top: 1%">click me</button>
+    <!-- end no 1 -->
+    <!-- no 2 -->
+    <button id="tombol"style="width: 130px;height: 50px;margin-left: 46%;margin-top: 1%">click me</button>
+    <!-- end no 2 -->
+    <!-- no 3 -->
+     <button onclick="increment()"style="width: 30px;height: 30px;margin-left: 49%;margin-top: 1%">+</button>
+    <p id="counter" style="text-align: center;">0</p>
+     <button onclick="decrement()"style="width: 30px;height: 30px;margin-left: 49%;">-</button>
+    <!-- end no 3 -->
+     <div style="width: px;height: 20px;background-color: rgb(114, 118, 137);margin-top: 10px;border-radius: 30px;"></div>
+    <!-- no 4 -->
+
+    <!-- end no 4 -->
+    <script>
+        // no 1
+        const tombol = document.getElementById("myButton");
+        tombol.addEventListener("click", function() {
+        alert("Tombol berhasil diklik!");
+        });
+        // end no 1
+        // no 2
+        window.onload = function() {
+        const tombol2 = document.getElementById("tombol");
+        tombol2.addEventListener("click", function() {
+            alert("sudah berhasil diklik!");
+        });
+        };
+        // end no 2
+        // no 3
+        let counter = document.getElementById("counter");
+            let count = 0;
+            function increment() {
+              count++;
+              counter.innerText = count;
+            }
+            function decrement() {
+              count--;
+              counter.innerText = count;
+            }
+        // end no 3
+        // no 4
+       
+        // end no 4
+    </script>
+</body>
+</html>

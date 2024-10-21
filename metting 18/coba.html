@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="onPageLoad()">
+    <button onclick="showmassage()" style="width: 130px;height: 50px;margin-left: 45%;margin-top: 5%;">click me</button>
+    <button id="myButton"style="width: 130px;height: 50px;margin-left: 45%;margin-top: 1%">click me</button>
+    <script>
+        function showmassage(){
+            alert("hello")
+        }
+
+        function onPageLoad(){
+            alert("selamat datang")
+        }
+
+        const tombol = document.getElementById("myButton");
+        tombol.addEventListener("click", function() {
+        alert("Tombol diklik");
+        });
+    </script>
+</body>
+</html>

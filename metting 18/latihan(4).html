@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan nomor 4</title>
+</head>
+
+<body onload="onPageLoad()">
+
+    <button id="MyButton" onClick="username()">Tampilkan Pesan</button>
+
+    <script>
+        function onPageLoad() {
+            let tanya1 = confirm("Apakah anda ingin melanjutkan ?");
+            if (tanya1 == true) {
+                alert("Selamat datang di halaman!");
+                username();
+            } else {
+                alert("Anda memilih untuk tidak melanjutkan");
+            }
+        }
+
+        function username() {
+            const name = prompt("Masukkan username");
+
+            if (name === "") {
+                const ulang = confirm("Apakah anda ingin mengulang?");
+                if (ulang == true) {
+                    username();
+                } else {
+                    alert("Terima Kasih");
+                }
+            } else if (name === null) { // Memperbaiki penggunaan perbandingan
+                alert("Anda membatalkan");
+            } else {
+                alert("Selamat Datang " + name);
+            }
+        }
+
+        const editcss = document.getElementById("MyButton");
+        editcss.style.cssText = `
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            transition: background-color 0.1s;
+            margin-top: 50px;
+        `;
+
+        editcss.addEventListener('mouseover', function () {
+            this.style.backgroundColor = 'lightgray';
+        });
+
+        editcss.addEventListener('mouseout', function () {
+            this.style.backgroundColor = '';
+        });
+    </script>
+
+</body>
+
+</html>
