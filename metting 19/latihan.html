@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* CSS untuk memperbaiki tampilan agar lebih nyaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Warna latar belakang yang lembut */
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4caf50; /* Warna hijau yang nyaman */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.1s ease;
+            margin: 10px; /* Memberikan jarak antar tombol */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Sedikit lebih gelap ketika di-hover */
+        }
+
+        .button:active {
+            background-color: #3e8e41; /* Warna saat tombol ditekan */
+        }
+
+        /* Mengatur div parent */
+        #parent {
+            margin-top: 40px; /* Memberikan jarak di atas div */
+        }
+
+        /* Memberikan padding pada body */
+        .container {
+            max-width: 600px; /* Mengatur lebar maksimum untuk konten */
+            margin: auto; /* Mengatur margin otomatis untuk pemusatan */
+            padding: 20px;
+            background-color: #ffffff; /* Latar belakang putih untuk konten */
+            border-radius: 8px; /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- no 1 -->
+        <h1>Trigger Custom Event</h1>
+        <button id="trigerButton" class="button">Click Me!</button>
+        <!-- end no 1 -->
+
+        <!-- no 2 -->
+        <div id="parent">
+            <h2>Child Button Example</h2>
+            <button id="myButton" class="button">Click Me</button>
+        </div>
+        <!-- end no 2 -->
+    </div>
+
+    <script>
+        // no 1
+        const costumClickEvent = new Event("costumClick");
+
+        function handlecostumClick() {
+            console.log("Custom click event triggered");
+        }
+
+        // Menambahkan event listener untuk menangani custom event
+        window.addEventListener("costumClick", handlecostumClick);
+
+        // Menambahkan event listener ke tombol untuk memicu event kustom
+        document.getElementById("trigerButton").addEventListener("click", function () {
+            window.dispatchEvent(costumClickEvent);
+        });
+        // end no 1
+
+        // no 2
+        const buttonClikedEvent = new Event("buttonClicked");
+
+        function handleButtonClick() {
+            console.log("Button was clicked");
+        }
+
+        window.addEventListener("buttonClicked", handleButtonClick);
+
+        function handleParentClick() {
+            console.log("Parent div received the event");
+        }
+
+        // Menambahkan event listener ke parent untuk menangani event yang dipicu dari child
+        window.addEventListener("buttonClicked", handleParentClick);
+
+        document.getElementById("myButton").addEventListener("click", function () {
+            window.dispatchEvent(buttonClikedEvent);
+        });
+        // end no 2
+    </script>
+</body>
+</html>
