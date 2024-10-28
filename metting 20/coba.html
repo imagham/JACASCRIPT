@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f8ff;
+        }
+
+        #mouseArea {
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #4caf50;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        #mouseArea:hover {
+            background-color: #e0f7fa; /* Warna saat mouse hover */
+        }
+
+        .button {
+            background-color: #4caf50; /* Warna hijau yang nyaman */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Events Example</h1>
+    <div id="mouseArea">Hover over me!</div>
+    <button class="button" id="resetButton">Reset</button>
+
+    <script>
+        const mouseArea = document.getElementById("mouseArea");
+
+        // Event Mouse Over
+        mouseArea.addEventListener("mouseover", function() {
+            console.log("Mouse entered the area!");
+            this.style.borderColor = "#2196F3"; // Mengubah warna border saat mouse hover
+        });
+
+        // Event Mouse Out
+        mouseArea.addEventListener("mouseout", function() {
+            console.log("Mouse left the area!");
+            this.style.borderColor = "#4caf50"; // Mengembalikan warna border
+        });
+
+        // Event Mouse Down
+        mouseArea.addEventListener("mousedown", function() {
+            console.log("Mouse button pressed down!");
+            this.style.backgroundColor = "#a5d6a7"; // Mengubah warna saat mouse ditekan
+        });
+
+        // Event Mouse Up
+        mouseArea.addEventListener("mouseup", function() {
+            console.log("Mouse button released!");
+            this.style.backgroundColor = ""; // Mengembalikan warna
+        });
+
+        // Reset Button
+        document.getElementById("resetButton").addEventListener("click", function() {
+            mouseArea.style.backgroundColor = ""; // Mengembalikan warna latar
+            mouseArea.style.borderColor = "#4caf50"; // Mengembalikan warna border
+            console.clear(); // Menghapus konsol log
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
