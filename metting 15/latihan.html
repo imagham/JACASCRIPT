@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Interaktif</title>
+</head>
+<body>
+    <script>
+        // Menampilkan pesan pembuka
+        alert("Selamat Datang di Latihan Interaktif!");
+
+        // Soal 1: Memeriksa apakah angka lebih kecil, lebih besar, atau sama dengan 10
+        let angka = Number(prompt('Masukkan angka:'));
+        if (isNaN(angka)) {
+            alert('Input bukan angka. Silakan masukkan angka!');
+        } else if (angka > 10) {
+            alert('Angka lebih dari 10');
+        } else if (angka < 10) {
+            alert('Angka kurang dari 10');
+        } else {
+            alert('Angka sama dengan 10');
+        }
+
+        // Soal 2: Konfirmasi agama
+        let soal;
+        if (confirm('Apakah Anda Islam?')) {
+            soal = 'Anda Menekan OK (Maasya Allah Brother)';
+        } else {
+            soal = 'Anda Menekan Cancel (Astaghfirullah Brother)';
+        }
+        alert(soal);
+
+        // Soal 3: Memasukkan nama
+        let nama = prompt('Masukkan Nama:');
+        if (nama === null || nama.trim() === "") {
+            alert('Anda belum memasukkan nama');
+        } else {
+            alert('Wilujeng Sumping, ' + nama + '!');
+        }
+
+        // Soal 4: Konfirmasi apakah ingin memasukkan nama
+        alert("Selamat Datang");
+        if (confirm("Apakah Anda ingin memasukkan nama?")) {
+            let namaBaru = prompt("Masukkan Nama Anda:");
+            if (namaBaru === null || namaBaru.trim() === "") {
+                alert("Anda tidak memasukkan nama!");
+            } else {
+                alert("Selamat Datang, " + namaBaru + "!");
+            }
+        } else {
+            alert("Terimakasih");
+        }
+    </script>
+</body>
+</html>
